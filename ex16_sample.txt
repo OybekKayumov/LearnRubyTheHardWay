@@ -1,0 +1,4 @@
+THE BOOK OF RUBY
+HOW TO READ THIS BOOK
+The book is divided up into bite-sized chunks. Each chapter introduces a theme which is subdivided into sub-topics. Each programming topic is accompanied by one or more small self-contained, ready-to-run Ruby programs. 
+If you want to follow a well-structured ‘course’, read each chapter in sequence. If you prefer a more hands-on approach, you can run the programs first and refer to the text when you need an explanation. If you already have some experience of Ruby, feel free to cherry-pick topics in any order that you find useful. There are no monolithic applications in this book so you don’t have to worry that you might ‘lose the plot’ if you read the chapters out of order!cool
