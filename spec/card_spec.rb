@@ -43,7 +43,7 @@ end
 
 RSpec.describe Card do
   before do
-  before(:exapmle) do
+    puts "Hey, I will be output before EACH test example"
   end
   
   it 'has a rank' do
