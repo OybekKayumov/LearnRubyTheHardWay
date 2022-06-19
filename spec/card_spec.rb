@@ -42,6 +42,9 @@ class Card
 end
 
 RSpec.describe Card do
+  before do
+  before(:exapmle) do
+  end
   
   it 'has a rank' do
     card = Card.new('Ace', 'Spades')
@@ -56,3 +59,10 @@ RSpec.describe Card do
 end
 
 
+#? same and identical blocks "before" and "before(:exapmle)"
+#? and this block of code is going to run before each of exapmle in test suite
+
+# before do
+# before(:exapmle) do
+
+# end
