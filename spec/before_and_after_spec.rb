@@ -27,3 +27,15 @@ RSpec.describe "before and after hooks" do
     expect(5 - 4).to eq(1) 
   end  
 end
+
+# Before context
+# Before example
+# After example
+# .Before example
+# After example
+# .After context
+
+
+# Finished in 0.00929 seconds (files took 0.19762
+# seconds to load)
+# 2 examples, 0 failures
