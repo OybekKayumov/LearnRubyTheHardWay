@@ -97,13 +97,17 @@ RSpec.describe Card do
       # 3 - lazy loading - means that we're not qoing to create a "card" variable until it needs to be used
   # "let"  runs first time when expect(card.rank...) calls - line 103 and 109
 
-  let(:card) { Card.new('Ace', 'Spades') }
-  let(:x) { 1 + 1 }
-  let(:y) { x + 10 }
+  # let(:card) { Card.new('Ace', 'Spades') }
+  # let(:x) { 1 + 1 }
+  # let(:y) { x + 10 }
+  
+  let!(:card) { Card.new('Ace', 'Spades') }
+  # let! same as "before" and loads each time, not lazy loading 
+
   
   it 'has a rank and that rank can change' do
-    x
-    y
+    # x
+    # y
     expect(card.rank).to eq('Ace')
     card.rank = "Queen"
     expect(card.rank).to eq('Queen') 
