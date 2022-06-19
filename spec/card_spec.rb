@@ -30,34 +30,34 @@
 
 #todo refactoring
 
-class Card
-  # attr_reader :type
-  attr_reader :rank, :suit
+# class Card
+#   # attr_reader :type
+#   attr_reader :rank, :suit
 
-  def initialize(rank, suit)
-    # @type = type
-    @rank = rank
-    @suit = suit
-  end
-end
+#   def initialize(rank, suit)
+#     # @type = type
+#     @rank = rank
+#     @suit = suit
+#   end
+# end
 
-RSpec.describe Card do
-  before do
-    puts "Hey, I will be output before EACH test example"
-    @my_card = Card.new('Ace', 'Spades')
-  end
+# RSpec.describe Card do
+#   before do
+#     puts "Hey, I will be output before EACH test example"
+#     @card = Card.new('Ace', 'Spades')
+#   end
   
-  it 'has a rank' do
-    # card = Card.new('Ace', 'Spades')
-    expect(@my_card.rank).to eq('Ace')
-  end
+#   it 'has a rank' do
+#     # card = Card.new('Ace', 'Spades')
+#     expect(@card.rank).to eq('Ace')
+#   end
 
-  it 'has a suit' do
-    # card = Card.new('Ace', 'Spades')
-    expect(@my_card.suit).to eq('Spades')
-  end
+#   it 'has a suit' do
+#     # card = Card.new('Ace', 'Spades')
+#     expect(@card.suit).to eq('Spades')
+#   end
 
-end
+# end
 
 
 #? same and identical blocks "before" and "before(:exapmle)"
@@ -65,5 +65,35 @@ end
 
 # before do
 # before(:exapmle) do
-
 # end
+
+#todo helpers methods
+
+class Card
+  attr_reader :rank, :suit
+
+  def initialize(rank, suit)
+    @rank = rank
+    @suit = suit
+  end
+end
+
+RSpec.describe Card do
+  # before do
+  #   puts "Hey, I will be output before EACH test example"
+  #   @card = Card.new('Ace', 'Spades')
+  # end
+  def card
+    Card.new('Ace', 'Spades')    
+  end
+  
+  
+  it 'has a rank' do
+    expect(card.rank).to eq('Ace')
+  end
+
+  it 'has a suit' do
+    expect(card.suit).to eq('Spades')
+  end
+
+end
