@@ -31,10 +31,10 @@
 #todo refactoring
 
 class Card
-  attr_reader :type
+  # attr_reader :type
 
-  def initialize(type)
-    @type = type
+  def initialize(rank, suit)
+    # @type = type
   end
 end
 
