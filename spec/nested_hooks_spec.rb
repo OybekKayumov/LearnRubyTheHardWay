@@ -1,11 +1,11 @@
 RSpec.describe "nested hooks" do
   before(:context) do
-    puts "Before context"
+    puts "Outer Before context"
   end
   
   # runs many
   before(:example) do
-    puts "Before example"
+    puts "Outer Before example"
   end 
 
   it 'does basic maths' do
@@ -14,6 +14,22 @@ RSpec.describe "nested hooks" do
 
   context "with condition A" do
     
+    before(:context) do
+      puts "Inner Before context"
+    end
+    
+    # runs many
+    before(:example) do
+      puts "Inner Before example"
+    end 
+
+    it 'does somemore basic maths' do
+      expect(10 * 20).to eq(200) 
+    end  
+
+    it 'does subtraction as well' do
+      expect(10 - 20).to eq(-10) 
+    end  
   end
   
 end
