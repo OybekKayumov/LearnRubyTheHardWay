@@ -98,8 +98,10 @@ RSpec.describe Card do
   # "let"  runs first time when expect(card.rank...) calls - line 103 and 109
 
   let(:card) { Card.new('Ace', 'Spades') }
+  let(:x) { 1 + 1 }
   
   it 'has a rank and that rank can change' do
+    x
     expect(card.rank).to eq('Ace')
     card.rank = "Queen"
     expect(card.rank).to eq('Queen') 
