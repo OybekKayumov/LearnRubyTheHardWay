@@ -3,4 +3,8 @@
 
 ## pry practice
 
-## rspec practice
+## rspec practice commands
+  - gem install rspec
+  - rspec --init
+  - rspec .\spec\file_name.rb
+  
