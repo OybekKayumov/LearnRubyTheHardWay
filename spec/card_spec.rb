@@ -91,7 +91,8 @@ RSpec.describe Card do
   #   Card.new('Ace', 'Spades')    
   # end
   
-  # memoization, benefits of using "let"
+  # memoization caching the result of a computationally expensive operation to reuse it later 
+  # benefits of using "let" memoization:
       # 1 - separation between different exapmles 
       # 2 - memoization with single example
       # 3 - lazy loading - means that we're not qoing to create a "card" variable until it needs to be used
@@ -120,5 +121,6 @@ RSpec.describe Card do
   it 'has a custom error message' do
     comparison = 'Spades'
     expect(card.suit).to eq(comparison)
+    # , "Hey, I expected #{comparision} but I got #{card.suit} instead"
   end
 end
