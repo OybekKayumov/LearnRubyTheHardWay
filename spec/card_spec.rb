@@ -32,9 +32,10 @@
 
 class Card
   # attr_reader :type
+  attr_reader :rank, :suit
 
   def initialize(rank, suit)
-    # @type = type
+    # @type = type    
   end
 end
 
