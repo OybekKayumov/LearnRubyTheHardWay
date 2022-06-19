@@ -1,11 +1,11 @@
 RSpec.describe "nested hooks" do
   before(:context) do
-    puts "Outer Before context"
+    puts "OUTER Before context"
   end
   
   # runs many
   before(:example) do
-    puts "Outer Before example"
+    puts "OUTER Before example"
   end 
 
   it 'does basic maths' do
@@ -15,12 +15,12 @@ RSpec.describe "nested hooks" do
   context "with condition A" do
     
     before(:context) do
-      puts "Inner Before context"
+      puts "INNER Before context"
     end
     
     # runs many
     before(:example) do
-      puts "Inner Before example"
+      puts "INNER Before example"
     end 
 
     it 'does somemore basic maths' do
@@ -37,3 +37,15 @@ end
 
 # Before context
 # Before example
+
+#---------------
+# OUTER Before context
+# OUTER Before example
+# .INNER Before context
+# OUTER Before example
+# INNER Before example
+# .OUTER Before example
+# INNER Before example
+
+# Before context means run once within the current context or current block
+# Before example means run once before every example, but only within that current block
