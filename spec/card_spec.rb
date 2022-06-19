@@ -99,9 +99,11 @@ RSpec.describe Card do
 
   let(:card) { Card.new('Ace', 'Spades') }
   let(:x) { 1 + 1 }
+  let(:y) { x + 10 }
   
   it 'has a rank and that rank can change' do
     x
+    y
     expect(card.rank).to eq('Ace')
     card.rank = "Queen"
     expect(card.rank).to eq('Queen') 
