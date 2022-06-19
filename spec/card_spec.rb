@@ -87,10 +87,17 @@ RSpec.describe Card do
   #   puts "Hey, I will be output before EACH test example"
   #   @card = Card.new('Ace', 'Spades')
   # end
-  def card
-    Card.new('Ace', 'Spades')    
-  end
+  # def card
+  #   Card.new('Ace', 'Spades')    
+  # end
   
+  # memoization, benefits of using "let"
+      # 1 - separation between different exapmles 
+      # 2 - memoization with single example
+      # 3 - lazy loading - means that we're not qoing to create a "card" variable until it needs to be used
+  # "let"  runs first time when expect(card.rank...) calls - line 103 and 109
+
+  let(:card) { Card.new('Ace', 'Spades') }
   
   it 'has a rank and that rank can change' do
     expect(card.rank).to eq('Ace')
