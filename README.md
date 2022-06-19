@@ -4,6 +4,3 @@
 ## pry practice
 
 ## rspec practice
-=======
-# LearnRubyTheHardWay
-
