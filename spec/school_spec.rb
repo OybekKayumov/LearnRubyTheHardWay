@@ -1,9 +1,10 @@
 class School
   attr_reader :name, :students
   
-  def initialize(name)
+  # def initialize(name)
+  def initialize(name, students = [])
     @name = name
-    @students = []
+    @students = students
   end
 end
 
