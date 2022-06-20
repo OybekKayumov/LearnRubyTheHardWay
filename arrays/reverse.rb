@@ -87,11 +87,25 @@ p fruits.min
 
 puts
 def custom_max(arr)
-  arr.sort[-1]    #last element of array
+  # arr.sort[-1]    #last element of array
+  # 2
+  return nil if arr.empty?
+  max = arr[0]
+
+  arr.each do |val|
+    if val > max
+      max = val
+    end
+  end
+  max
 end
 
 def custom_min(arr)
-  arr.sort[0]    #first element of array  
+  # arr.sort[0]    #first element of array  
+  # 3
+  min = arr[0]
+  arr.each { |val| min = val if val < min }
+  min
 end
 
 numbers = [3, 9, 5, 7, 10, 1]
