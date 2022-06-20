@@ -68,3 +68,35 @@ p custom_concat(a, b)
 
 p a
 # [1, 2, 3, 4, 5, 6]
+
+puts
+#todo max and min values
+stock_prices = [712.99, 487.12, 86.5, 651,92]
+
+p stock_prices.max
+p stock_prices.min
+# 712.99
+# 86.5
+
+fruits = ['apple', 'kivi', 'banana', 'watermelon']
+
+p fruits.max
+p fruits.min
+# "watermelon"
+# "apple"
+
+puts
+def custom_max(arr)
+  arr.sort[-1]    #last element of array
+end
+
+def custom_min(arr)
+  arr.sort[0]    #first element of array  
+end
+
+numbers = [3, 9, 5, 7, 10, 1]
+p custom_max(numbers)
+p custom_min(numbers)
+# 10
+# 1
+
