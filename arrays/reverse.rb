@@ -39,3 +39,32 @@ p number.sort.reverse
 p words.sort.reverse
 # [9, 8, 7, 6, 5, 4, 3, 2, 1]
 # ["zebra", "kangaroo", "caterpillar", "apple"]
+
+puts
+# todo concat, modify oroginal array
+p [1, 2, 3] + [4, 5]
+p [1, 2, 3].concat([4, 5])
+# [1, 2, 3, 4, 5]
+
+num = [1, 2, 3]
+p num
+# [1, 2, 3]
+
+num.concat([4, 5, 6])
+p num
+# [1, 2, 3, 4, 5, 6]
+
+puts
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+def custom_concat(arr1, arr2)
+  arr2.each { |elem| arr1 << elem }
+  arr1  
+end
+
+p custom_concat(a, b)
+# [1, 2, 3, 4, 5, 6]
+
+p a
+# [1, 2, 3, 4, 5, 6]
