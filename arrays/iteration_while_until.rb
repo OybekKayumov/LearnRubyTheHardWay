@@ -16,3 +16,14 @@ end
 # baboon
 # 3
 # cheetah
+
+puts
+#todo until
+i = 0
+until i == animals.length  # >=
+  puts i
+  puts animals[i]
+  i +=1
+end
+
+# brakes when i == animals.length
