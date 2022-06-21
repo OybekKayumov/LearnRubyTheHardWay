@@ -26,3 +26,8 @@ words.each { |word| puts word.length}
 # 3
 # 6
 # 5
+
+# todo write a longest_word method that accepts a string (sentence) as its only argument and retunr the longest word in the sentence
+
+longest_word("Bobby loves big scary kangaroos") # kangaroos
+longest_word("Ruby is my favorite language") # language
