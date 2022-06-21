@@ -103,3 +103,11 @@ p today
 p tomorrow
 # ["steak", "steak burger", "tuna steaks"]
 # ["vegetables", "kale", "tofu"]
+
+puts
+#todo write an evens_and_odds method that accepts an array of whole numbers
+def evens_and_odds(numbers)
+  numbers.partition { |number| number.odd? }
+end
+p evens_and_odds([4,8,15,16,23,42])
+# [[15, 23], [4, 8, 16, 42]]
