@@ -58,3 +58,28 @@ select_res = animals.select { |animal| animal.include?('c')}
 
 p select_res
 # ["cheetah", "cat", "cat"]
+
+puts
+#todo Unpack a Multidimensional Array
+users = [
+  ['bob', 25, 'male'],
+  ['susan', 21, 'female'],
+  ['larry', 41, 'male'],
+]
+p users[0]
+# ["bob", 25, "male"]
+
+p users[1][2]   # "female"
+
+bob, susan, larry, tom = users
+
+p bob
+p susan
+p larry
+p tom
+# ["bob", 25, "male"]
+# ["susan", 21, "female"]
+# ["larry", 41, "male"]
+# nil
+
+# todo The .partition Method on an Array
