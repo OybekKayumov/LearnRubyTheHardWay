@@ -49,3 +49,12 @@ p palindromes = words.select { |word| word == word.reverse }
 # ["level", "racecar"]
 
 # todo The .reject Method on an Array
+animals = ['cheetah', 'cat', 'lion', 'elephant', 'dog', 'cat']
+
+reject_res = animals.reject { |animal| animal.include?('c')}
+p reject_res 
+# ["lion", "elephant", "dog"]
+select_res = animals.select { |animal| animal.include?('c')}
+
+p select_res
+# ["cheetah", "cat", "cat"]
