@@ -25,3 +25,27 @@ p colors.index('red') #!0 when many similar, it returns first elements index
 p colors.find_index('green') #2
 
 p colors.index('orange') # nil
+
+puts
+#todo The .select Method on an Array
+grades = [80, 95, 14, 78, 36]
+
+matches = grades.select do |number|
+  number >=75
+end
+
+p matches
+# [80, 95, 78]
+
+matches2 = grades.select do |number|
+  number.even?
+end
+p matches2
+# [80, 14, 78, 36]
+
+words = ['level', 'racecar', 'selfless', 'dinosaur']
+
+p palindromes = words.select { |word| word == word.reverse }
+# ["level", "racecar"]
+
+# todo The .reject Method on an Array
