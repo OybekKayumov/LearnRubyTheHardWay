@@ -82,4 +82,24 @@ p tom
 # ["larry", 41, "male"]
 # nil
 
+puts
 # todo The .partition Method on an Array
+
+foods = ['steak', 'vegetables', 'steak burger', 'kale', 'tofu', 'tuna steaks']
+
+eat_today = foods.select { |food| food.include?("steak") }
+eat_tomorrow = foods.reject { |food| food.include?("steak") }
+
+p eat_today
+p eat_tomorrow
+# ["steak", "steak burger", "tuna steaks"]
+# ["vegetables", "kale", "tofu"]
+
+p foods.partition { |food| food.include?('steak') }
+# [["steak", "steak burger", "tuna steaks"], ["vegetables", "kale", "tofu"]]
+puts
+today, tomorrow = foods.partition { |food| food.include?('steak') }
+p today
+p tomorrow
+# ["steak", "steak burger", "tuna steaks"]
+# ["vegetables", "kale", "tofu"]
