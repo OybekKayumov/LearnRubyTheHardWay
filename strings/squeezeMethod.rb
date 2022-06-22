@@ -46,3 +46,29 @@ p word
 word.clear
 p word
 #! clear method mutates an original object
+
+# todo the .delete Method on a String
+
+puts "hello world".delete("l")
+# heo word
+
+puts "hello world".delete("ldr")
+# heo wo
+
+puts
+def custom_delete(str, delete_chars)
+  new_str = ''
+  # str.each_char do |char|
+  #   unless delete_chars.include?(char)
+  #     new_str << char
+  #   end    
+  # end
+
+  #todo same 
+  str.each_char {|char| new_str << char unless delete_chars.include?(char) }
+        
+  new_str
+end
+
+p custom_delete("Hello world", "l")
+# "Heo word"
