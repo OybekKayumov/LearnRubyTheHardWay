@@ -72,3 +72,5 @@ end
 
 p custom_delete("Hello world", "l")
 # "Heo word"
+p custom_delete("Hello world", "ldr")
+"Heo wo"
