@@ -24,14 +24,11 @@ def custom_squeeze(string)
   final = ''
   chars = string.split('') # = as "string.chars", returns an array of characters
 
-  chars.each_with_index do |char, index|
-    if char == chars[index + 1]
-      next
-    else 
-      final << char
-    end
-  end
+  chars.each_with_index {|char, index| char == chars[index + 1] ? next : final << char }
+
   final
+
 end
 
 p custom_squeeze(sentence2)
+# "The ardvark jumped over the fence! ! !"
