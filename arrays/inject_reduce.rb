@@ -23,7 +23,8 @@ p res # 100
 
 puts
 # (1) if multiply
-sum = [3, 4, 5, 6, 7].reduce(1) do |prev, curr|
+# sum = [3, 4, 5, 6, 7].reduce(1) do |prev, curr|
+sum = [3, 4, 5, 6, 7].inject(1) do |prev, curr|
   puts "The previous value is #{prev}"
   puts "The current value is #{curr}"
   
@@ -31,9 +32,6 @@ sum = [3, 4, 5, 6, 7].reduce(1) do |prev, curr|
 end
 
 p sum # 2520
-
-puts "The previous value is #{prev}"
-  puts "The current value is #{curr}"
   
 # The previous value is 1
 # The current value is 3
