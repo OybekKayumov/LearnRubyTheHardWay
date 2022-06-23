@@ -59,3 +59,18 @@ p sports
 # ["soccer", "baskeyball", "tennis"]
 
 puts
+def custom_compact(array)
+  final = []
+  # array.each do |elem| 
+  #   unless elem.nil? 
+  #     final << elem 
+  #   end   
+  # end
+  # or same
+  array.each { |elem| final << elem unless elem.nil?}
+  final  
+end
+
+p custom_compact(sports)
+# ["soccer", "baskeyball", "tennis"]
+
