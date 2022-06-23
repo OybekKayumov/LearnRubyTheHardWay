@@ -19,4 +19,15 @@ p c
 p registrations.flatten
 # ["Bob", "Dan", "Jimm", "Rick", "Susan", "Molly", "Tom", "Sean", "George"]
 
+puts
+p registrations
+# [["Bob", "Dan", "Jimm"], ["Rick", "Susan", "Molly"], ["Tom", "Sean", "George"]]
 
+p registrations.flatten!
+# ["Bob", "Dan", "Jimm", "Rick", "Susan", "Molly", "Tom", "Sean", "George"]
+
+p registrations
+# ["Bob", "Dan", "Jimm", "Rick", "Susan", "Molly", "Tom", "Sean", "George"]
+
+# There is a complimentary bang method after the flattened method
+# and will overwrite.
