@@ -8,3 +8,20 @@ p [1, 2, 3] * 5
 
 p ['A', 'B', 'C'] * 4
 # ["A", "B", "C", "A", "B", "C", "A", "B", "C", "A", "B", "C"]
+
+puts
+def custom_multiply(arr, num)
+  res = []
+  # num.times do
+  #   arr.each do |elem|
+  #     res << elem
+  #   end
+  # end
+  # or
+  num.times { arr.each { |elem|  res << elem } }
+  res
+end
+
+p custom_multiply([1, 2, 3], 3)
+# [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
