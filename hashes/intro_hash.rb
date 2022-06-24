@@ -43,3 +43,11 @@ p nba_roster["Cleveland Cavaliers"]
 
 p nba_roster["Cleveland Cavaliers"][2]
 # "Kyrie Irving"
+
+p nba_roster["GS Warriors"]
+# ["Stephen Curry", "Klay Thomson", "Kevin Durant"]
+
+#!
+p nba_roster["GS warriors"] #nil  Warriors
+
+p nfl_roster["Tom brady"] #nil  Brady
