@@ -110,3 +110,80 @@ vegan_shoppin_list = {}
 p shoppin_list.length
 p shoppin_list.empty? #false
 p vegan_shoppin_list.empty? #true
+
+puts
+# todo The .each Method on a Hash
+
+capitals = {alabama: "Montgomery", alaska: 'Juneau', arizona: "Phoenix", arkansas: "Little Rock"}
+
+capitals.each do |state, capital|
+  puts "Quering hash..."
+  puts "The capital of #{state} is #{capital}"  
+end
+
+# Quering hash...
+# The capital of alabama is Montgomery
+# Quering hash...
+# The capital of alaska is Juneau
+# Quering hash...
+# The capital of arizona is Phoenix
+# Quering hash...
+# The capital of arkansas is Little Rock
+
+puts
+#todo each_pair
+capitals.each_pair do |state, capital|
+  puts "Quering hash..."
+  puts "The capital of #{state} is #{capital}"  
+end
+
+puts
+capitals.each do |guess|
+  puts "Quering hash..."
+  puts guess
+end
+
+# Quering hash...
+# alabama
+# Montgomery
+# Quering hash...
+# alaska
+# Juneau
+# Quering hash...
+# arizona
+# Phoenix
+# Quering hash...
+# arkansas
+# Little Rock
+
+puts
+puts
+capitals.each do |guess|
+  puts "Quering hash..."
+  puts guess[0]
+end
+# Quering hash...
+# alabama
+# Quering hash...
+# alaska
+# Quering hash...
+# arizona
+# Quering hash...
+# arkansas
+
+puts
+puts
+capitals.each do |guess|
+  puts "Quering hash..."
+  puts guess[1]
+end
+
+# Quering hash...
+# Montgomery
+# Quering hash...
+# Juneau
+# Quering hash...
+# Phoenix
+# Quering hash...
+# Little Rock
+
