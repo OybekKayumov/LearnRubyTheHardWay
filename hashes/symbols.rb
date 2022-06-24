@@ -233,4 +233,14 @@ end
 p get_keys_from_hash(salaries)
 # [:director, :producer, :ceo]
 
+puts
+def get_values_from_hash(hash)
+  values = []
+  hash.each do |key, val|
+    values << val
+  end
+  values
+end
 
+p get_values_from_hash(salaries)
+# [1000, 2000, 10000]
