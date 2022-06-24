@@ -76,3 +76,28 @@ p menu.fetch(:salad, nil)  # * default value is nil
 p menu.fetch(:salad, 9.99)  # * default value is 9.99
 
 #* it only shows us the second argument if it's not able to find the first one as a key in the hash.
+
+puts
+#todo Add a Key Value Pair to a Hash with Bracket Syntax or the .store Method
+menu = {burger: 3.39, taco: 5.96, chips: 0.50}
+
+p menu[:burger]
+p menu[:sandwich]   # nil
+
+p menu[:sandwich] = 8.99
+p menu
+# {:burger=>3.39, :taco=>5.96, :chips=>0.5, :sandwich=>8.99}
+
+p menu[:taco] = 2.99
+p menu
+# {:burger=>3.39, :taco=>2.99, :chips=>0.5, :sandwich=>8.99}
+
+# store
+# menu.store(key, value)
+menu.store(:sushi, 24.99)
+p menu
+# {:burger=>3.39, :taco=>2.99, :chips=>0.5, :sandwich=>8.99, :sushi=>24.99}
+menu.store(:steak, 34.99)
+p menu
+p menu[:steak]  # 34.99
+
