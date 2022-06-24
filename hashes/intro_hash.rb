@@ -21,3 +21,8 @@ nfl_roster =
   "Rob Gronkowski" => "New England Patriots"
 }
 
+nba_roster = 
+{
+  "Cleveland Cavaliers" => [ "LeBron James", "Kevin Love", "Kyrie Irving" ],
+  "GS Warriors" => [ "Stephen Curry", "Klay Thomson", "Kevin Durant" ]  
+}
