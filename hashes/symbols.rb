@@ -217,4 +217,20 @@ end
 # producer
 # Employee record: ----
 # ceo
-# salaries.
+
+puts
+salaries.each_value { |salary| puts "The next employee earns #{salary}"}
+
+puts
+def get_keys_from_hash(hash)
+  keys = []
+  hash.each do |key, val|
+    keys << key
+  end
+  keys  
+end
+
+p get_keys_from_hash(salaries)
+# [:director, :producer, :ceo]
+
+
