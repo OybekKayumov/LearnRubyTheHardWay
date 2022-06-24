@@ -187,3 +187,23 @@ end
 # Quering hash...
 # Little Rock
 
+# exercise
+hash = {a: 5, b: 2, c: 3, d: 5, e: 3, f: 3}
+def value_count(hash, value)
+  result = 0
+  hash.each do |key, val|
+    result += 1 if value == val
+  end
+  result
+end
+
+p value_count(hash, 2)
+p value_count(hash, 5)
+p value_count(hash, 3)
+# 1
+# 2
+# 3
+
+puts 
+# todo The .each_key and .each_value Methods
+
