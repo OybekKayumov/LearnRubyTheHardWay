@@ -250,3 +250,14 @@ p get_values_from_hash(salaries)
 #todo get uniq value
 # [:director, :producer, :ceo, :assistant, :assistant2]
 # [1000, 2000, 10000, 1500]
+
+puts
+# todo Retrieve Keys or Values from Hash as an Array
+
+shoppin_list = {banans: 5, oranges: 10, carrots: 3, crackers: 5}
+
+p shoppin_list.keys
+# [:banans, :oranges, :carrots, :crackers]
+
+p shoppin_list.values.uniq
+# [5, 10, 3]
