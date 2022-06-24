@@ -206,4 +206,15 @@ p value_count(hash, 3)
 
 puts 
 # todo The .each_key and .each_value Methods
-
+salaries = {director: 1000, producer: 2000, ceo: 10000}
+salaries.each_key do |position|
+  puts "Employee record: ----"
+  puts "#{position}"  
+end
+# Employee record: ----
+# director
+# Employee record: ----
+# producer
+# Employee record: ----
+# ceo
+# salaries.
