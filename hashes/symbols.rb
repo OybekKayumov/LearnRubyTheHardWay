@@ -49,3 +49,9 @@ p :age.class # Symbol
 p :age.to_s.class # String
 
 p "age".to_sym.class # Symbol
+
+p "School Bus".to_sym 
+# :"School Bus"
+# Symbol  
+p "School_bus".to_sym 
+# :School_bus
