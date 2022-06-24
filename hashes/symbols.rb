@@ -101,3 +101,12 @@ menu.store(:steak, 34.99)
 p menu
 p menu[:steak]  # 34.99
 
+puts
+# todo The .length and .empty? Methods on a Hash
+
+shoppin_list = {banans: 5, oranges: 10, carrots: 3, crackers: 15}
+vegan_shoppin_list = {}
+
+p shoppin_list.length
+p shoppin_list.empty? #false
+p vegan_shoppin_list.empty? #true
