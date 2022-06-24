@@ -25,6 +25,7 @@ p person[:handsome]
 p person[:languages]
 p person[:age]
 
+puts
 #! same, without rocket operator "=>" between
 person_new = {name: "Tom", 
   age: 25, 
@@ -32,8 +33,19 @@ person_new = {name: "Tom",
   languages: ['Javascript', 'Ruby', 'C++']
 }
 
-
 p person_new[:name]
 p person_new[:age]
 p person_new[:languages]
 p person_new[:handsome]
+# "Tom"
+# 25
+# ["Javascript", "Ruby", "C++"]
+# true
+
+puts
+#todo Convert Symbols to Strings and Vice Versa
+p :age.class # Symbol
+
+p :age.to_s.class # String
+
+p "age".to_sym.class # Symbol
