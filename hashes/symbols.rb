@@ -75,4 +75,4 @@ p menu.fetch(:salad, "Not Found")  # * default value
 p menu.fetch(:salad, nil)  # * default value is nil
 p menu.fetch(:salad, 9.99)  # * default value is 9.99
 
-
+#* it only shows us the second argument if it's not able to find the first one as a key in the hash.
