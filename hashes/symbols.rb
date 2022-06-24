@@ -222,6 +222,8 @@ puts
 salaries.each_value { |salary| puts "The next employee earns #{salary}"}
 
 puts
+salaries = {director: 1000, producer: 2000, ceo: 10000, assistant: 1500, assistant2: 1000,}
+puts
 def get_keys_from_hash(hash)
   keys = []
   hash.each do |key, val|
@@ -239,8 +241,12 @@ def get_values_from_hash(hash)
   hash.each do |key, val|
     values << val
   end
-  values
+  values.uniq
 end
 
 p get_values_from_hash(salaries)
 # [1000, 2000, 10000]
+
+#todo get uniq value
+# [:director, :producer, :ceo, :assistant, :assistant2]
+# [1000, 2000, 10000, 1500]
