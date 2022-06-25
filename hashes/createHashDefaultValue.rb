@@ -48,3 +48,29 @@ p puts power_rangers.to_h.class   # Hash
 
 puts
 # todo The .sort and .sort_by Methods on a Hash
+pokemon = {squirtle: 'Water', bulbasaur: 'Grass', charizard: 'Fire'}
+
+p pokemon.sort
+# [[:bulbasaur, "Grass"], [:charizard, "Fire"], [:squirtle, "Water"]]
+
+p pokemon.sort.class  # Array
+# [:bulbasaur, "Grass"] key: value pair
+
+puts 
+p pokemon.sort.reverse
+# [[:squirtle, "Water"], [:charizard, "Fire"], [:bulbasaur, "Grass"]]
+
+puts
+# todo sort by values, needs a block
+p pokemon.sort_by {|pokemon, type| pokemon }
+# [[:bulbasaur, "Grass"], [:charizard, "Fire"], [:squirtle, "Water"]]
+
+p pokemon.sort_by {|pokemon, type| type }
+# [[:charizard, "Fire"], [:bulbasaur, "Grass"], [:squirtle, "Water"]]
+# Fire, Grass, Water
+
+p pokemon.sort_by {|pokemon, type| type }.reverse
+# [[:squirtle, "Water"], [:bulbasaur, "Grass"], [:charizard, "Fire"]]
+
+puts
+# todo The .key? and .value? Methods on a Hash
