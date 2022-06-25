@@ -54,3 +54,13 @@ p start_of_year
 
 # add secunds
 p start_of_year + 180 # add 3 mins
+p start_of_year - 120 # - 2 mins
+
+puts
+p start_of_year + ( 60 * 60 ) # add 1 hour
+
+p start_of_year + ( 60 * 60 * 24  ) # add 1 day
+
+p start_of_year + ( 60 * 60 * 24 * 45 ) # add 45 days
+
+# 2022-02-15 00:00:00 +0500
