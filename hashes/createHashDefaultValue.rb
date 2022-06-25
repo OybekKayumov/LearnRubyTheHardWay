@@ -20,3 +20,31 @@ p fruit_prices_1[:mashrooms]  # "Not found"
 fruit_prices_1.default = "Not exist..."
 p fruit_prices_1[:mashrooms]  # "Not exist..."
 p fruit_prices_1[:steak]  # "Not exist..."
+
+puts
+# todo Convert Hash to Array and Vice Versa
+spice_girls = {scary: 'Melany Btown', sporty: 'Melanie Chisholm',
+               baby: 'Emma Bnuton', ginger: 'Gery Halliwell', 
+              posh: 'Victoria Beckham'}
+
+p spice_girls.to_a
+# [[:scary, "Melany Btown"], [:sporty, "Melanie Chisholm"], [:baby, "Emma Bnuton"], [:ginger, "Gery Halliwell"], [:posh, "Victoria Beckham"]]
+
+p spice_girls.to_a.flatten
+# [:scary, "Melany Btown", :sporty, "Melanie Chisholm", :baby, "Emma Bnuton", :ginger, "Gery Halliwell", :posh, "Victoria Beckham"]
+
+puts
+power_rangers = [
+  [:red, 'Jason'], [:black, 'Zack'], 
+  [:blue, 'Billy'], [:yellow, 'Trini'], 
+  [:pink, 'Kimberly'] 
+]
+
+p puts power_rangers.to_h   # convert to hash
+# {:red=>"Jason", :black=>"Zack", :blue=>"Billy", :yellow=>"Trini", :pink=>"Kimberly"}
+
+p puts power_rangers.to_h.class   # Hash
+
+
+puts
+# todo The .sort and .sort_by Methods on a Hash
