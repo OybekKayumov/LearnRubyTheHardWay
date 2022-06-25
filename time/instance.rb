@@ -41,3 +41,16 @@ p b_day.friday?   #false
 p b_day.saturday?   #!true
 p b_day.sunday?   #false
 
+puts 
+
+p b_day.dst?  # Daylight Savings Time. 
+# false
+
+#todo Add or Subtract Time by Seconds
+start_of_year = Time.new(2022, 1, 1)
+
+p start_of_year
+# 2022-01-01 00:00:00 +0500
+
+# add secunds
+p start_of_year + 180 # add 3 mins
