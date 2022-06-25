@@ -64,3 +64,20 @@ p start_of_year + ( 60 * 60 * 24  ) # add 1 day
 p start_of_year + ( 60 * 60 * 24 * 45 ) # add 45 days
 
 # 2022-02-15 00:00:00 +0500
+
+puts 
+def find_day_of_year_by_number(number)
+  current_date = Time.new(2022, 1, 1)
+  
+  one_day = 60 * 60 * 24  # add 1 day
+
+  until current_date.yday == number
+    current_date += one_day
+  end
+  current_date  
+end
+
+p find_day_of_year_by_number(150)
+# 2022-05-30 00:00:00 +0500
+p find_day_of_year_by_number(365)
+# 2022-12-31 00:00:00 +0500
