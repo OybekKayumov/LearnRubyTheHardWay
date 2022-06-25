@@ -74,3 +74,20 @@ p pokemon.sort_by {|pokemon, type| type }.reverse
 
 puts
 # todo The .key? and .value? Methods on a Hash
+cars = {toyota: 'camry', chevrolet: 'aveo', ford: 'F-150', kia: 'soul'}
+
+puts cars.key?(:ford)   #true
+puts cars.key?(:kia)   #true
+puts cars.key?(:ferrary)   #false
+
+puts
+puts cars.value?('F-150')   #true
+puts cars.value?('jeep')   #false
+
+# old methods
+puts cars.has_key?(:toyota)   #true
+puts cars.has_key?(:gm)   #false
+
+puts
+puts cars.has_value?('aveo')   #true
+puts cars.has_value?('bmw')   #false
