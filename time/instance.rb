@@ -26,4 +26,18 @@ puts
 p today.yday  # day from new year
 p today.wday  # weekday
 
-# Predicate Methods on Time Objects
+#todo Predicate Methods on Time Objects
+#* always ends with ? mark
+
+b_day = Time.new(1974, 06, 01)
+p b_day
+# 1974-06-01 00:00:00 +0500
+
+p b_day.monday?   #false
+p b_day.tuesday?   #false
+p b_day.wednesday?   #false
+p b_day.thursday?   #false
+p b_day.friday?   #false
+p b_day.saturday?   #!true
+p b_day.sunday?   #false
+
