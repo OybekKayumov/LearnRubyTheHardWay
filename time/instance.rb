@@ -154,3 +154,9 @@ p today.strftime("%Z %X %p %Y %B %d")
 
 # %Y - Year with century
 # %Z - Time zone name %% - Literal “%’’ character t = Time.now t.strftime(“Printed on %m/%d/%Y”) #=> “Printed on 04/09/2003” t.strftime(“at %I:%M%p”) #=> “at 08:56AM”
+
+# todo The .parse and .strptime Methods
+require 'time'    #! undefined method `parse' if commented
+
+puts Time.parse("2022-03-01")
+# 2022-03-01 00:00:00 +0500
