@@ -100,4 +100,25 @@ p winter != Time.new(2000, 12, 21)  # false
 puts indep_day.between?(birthday, winter)   #false
 puts indep_day.between?(summer, winter)   #true
 
+puts
 # todo Convert Time Object to Other Objects
+someday = Time.new(2000, 02, 15)
+p someday.yday
+p someday.wday
+p someday.mday
+
+puts 
+p someday.to_s
+# "2000-02-15 00:00:00 +0500"
+p someday.to_s.class  # String
+
+p someday.ctime.class  # String
+p someday.ctime 
+# "Tue Feb 15 00:00:00 2000"
+
+p someday.to_a.class  # Array
+
+p someday.to_a
+# [0, 0, 0, 15, 2, 2000, 2, 46, false, "DST"]
+# seconds, minutes, hours, day, month, year, day of the week, day from new year,
+# false - in between Daylight Saving Time 
