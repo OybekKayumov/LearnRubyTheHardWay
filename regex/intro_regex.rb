@@ -49,4 +49,16 @@ p voicemail.scan(/[xg]/)
 p voicemail.scan(/[caIhR]/)  
 # ["I", "c", "a", "a", "c", "h", "a", "a", "a", "c"]
 
+puts
 # todo The .scan Method II - String
+voicemail = "I can e reached at 555-123-4567 or regexman@gmail.com"
+
+p voicemail.scan(/d/)  # ["d"]
+
+#* digits
+p voicemail.scan(/\d/)  # \d means any single digit 
+# ["5", "5", "5", "1", "2", "3", "4", "5", "6", "7"]
+
+p voicemail.scan(/\d+/)  
+# \d+ means any occurences of one or more  of '+' immediately precedes this
+# ["555", "123", "4567"]
