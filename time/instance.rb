@@ -81,3 +81,10 @@ p find_day_of_year_by_number(150)
 # 2022-05-30 00:00:00 +0500
 p find_day_of_year_by_number(365)
 # 2022-12-31 00:00:00 +0500
+
+puts 
+#todo The Comparable Methods on a Time Object
+birthday = Time.new(2000, 07, 07)
+summer = Time.new(2000, 06, 21)
+indep_day = Time.new(2000, 7, 4)
+winter = Time.new(2000, 12, 21)
