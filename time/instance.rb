@@ -122,3 +122,35 @@ p someday.to_a
 # [0, 0, 0, 15, 2, 2000, 2, 46, false, "DST"]
 # seconds, minutes, hours, day, month, year, day of the week, day from new year,
 # false - in between Daylight Saving Time 
+
+puts
+# todo Convert Time Object to Formatted String
+today = Time.now
+p today
+p today.to_s
+
+puts
+p today.strftime("%B %d, %Y")
+# "June 26, 2022"
+
+p today.strftime("%Z %X %p %Y %B %d")
+# "DST 07:14:59 AM 2022 June 26"
+
+# Formatting options
+# %a - The abbreviated weekday name (“Sun”)
+# %b - The abbreviated month name (“Jan”)
+# %B - The full month name (“January”)
+# %c - The preferred local date and time representation
+# %d - Day of the month (01..31)
+# %j - Day of the year (001..366)
+# %m - Month of the year (01..12)
+
+# %p - Meridian indicator (“AM” or “PM”)
+
+# %w - Day of the week (Sunday is 0, 0..6)
+# %x - Preferred representation for the date alone, no time
+# %X - Preferred representation for the time alone, no date
+# %y - Year without a century (00..99)
+
+# %Y - Year with century
+# %Z - Time zone name %% - Literal “%’’ character t = Time.now t.strftime(“Printed on %m/%d/%Y”) #=> “Printed on 04/09/2003” t.strftime(“at %I:%M%p”) #=> “at 08:56AM”
