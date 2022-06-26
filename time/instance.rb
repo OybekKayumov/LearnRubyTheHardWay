@@ -160,3 +160,17 @@ require 'time'    #! undefined method `parse' if commented
 
 puts Time.parse("2022-03-01")
 # 2022-03-01 00:00:00 +0500
+
+puts
+puts Time.parse("03-04-2022")
+#* april 3
+# 2022-04-03 00:00:00 +0500
+
+puts
+puts Time.strptime("03-04-2022", '%m-%d-%Y')
+#* mart 4
+# 2022-03-04 00:00:00 +0500
+puts
+puts Time.strptime("03-04-2022", '%d-%m-%Y')
+#* april 3
+# 2022-04-03 00:00:00 +0500
