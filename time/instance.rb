@@ -88,3 +88,16 @@ birthday = Time.new(2000, 07, 07)
 summer = Time.new(2000, 06, 21)
 indep_day = Time.new(2000, 7, 4)
 winter = Time.new(2000, 12, 21)
+
+puts birthday < summer  #false
+puts indep_day < winter # true
+puts indep_day > winter # false
+
+puts
+p birthday == Time.new(2000, 07, 07) # true
+p winter != Time.new(2000, 12, 21)  # false
+
+puts indep_day.between?(birthday, winter)   #false
+puts indep_day.between?(summer, winter)   #true
+
+# todo Convert Time Object to Other Objects
