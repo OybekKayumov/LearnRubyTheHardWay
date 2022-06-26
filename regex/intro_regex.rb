@@ -60,5 +60,28 @@ p voicemail.scan(/\d/)  # \d means any single digit
 # ["5", "5", "5", "1", "2", "3", "4", "5", "6", "7"]
 
 p voicemail.scan(/\d+/)  
-# \d+ means any occurences of one or more  of '+' immediately precedes this
+#* \d+ means any occurences of one or more  of '+' immediately precedes this
 # ["555", "123", "4567"]
+
+voicemail = "I can e reached at 5-12-456 or regexman@gmail.com"
+voicemail = "I can e reached at 1234+5678*910/1112"
+p voicemail.scan(/\d+/) 
+# ["5", "12", "456"] 
+
+#* \d any one digit
+#* \d+ one ore more occurences of a digit
+
+voicemail = "I can e reached at 1234+5678*910/1112"
+p voicemail.scan(/\d+/) 
+# ["1234", "5678", "910", "1112"]
+
+puts
+#todo block
+voicemail = "I can e reached at 5-12-456 or regexman@gmail.com"
+voicemail.scan(/\d+/) { |digit_match| puts digit_match.length}
+# 1   5
+# 2   12
+# 3   456
+
+puts
+# todo The Wildcard Symbol
