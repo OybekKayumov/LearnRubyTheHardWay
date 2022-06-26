@@ -26,8 +26,8 @@ p phrase =~ /ing/ # 17 -- 1st
 
 puts
 # todo The .scan Method 
-# gives all of the matches that we're looking for
-voicemail = "I can e reached at 555-123-4567 or regexman@mail.com"
+#* gives all of the matches that we're looking for
+voicemail = "I can e reached at 555-123-4567 or regexman@gmail.com"
 
 p voicemail.scan(/e/) # find all 'e'
 # ["e", "e", "e", "e", "e"]
@@ -36,3 +36,17 @@ p voicemail.scan(/e/).length # 5
 
 p voicemail.scan(/re/) # ["re", "re"]
 p voicemail.scan(/re/).length # 2
+
+puts
+p voicemail.scan(/[re]/) 
+#* to find all occurences of either 'r' or 'e'  
+# ["e", "r", "e", "e", "r", "r", "e", "e"]
+p voicemail.scan(/[er]/)  #* same result
+
+#* [] any characters that placed within it
+p voicemail.scan(/[xg]/) 
+
+p voicemail.scan(/[caIhR]/)  
+# ["I", "c", "a", "a", "c", "h", "a", "a", "a", "c"]
+
+# todo The .scan Method II - String
