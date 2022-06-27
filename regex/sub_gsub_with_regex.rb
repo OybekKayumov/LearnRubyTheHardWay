@@ -36,3 +36,13 @@ puts
 # same with regex
 puts "(555)-555 1234".gsub(/[-\s\(\)]/, '')
 # 5555551234
+
+# rubular.com
+# the first phone number I called was 555-13-4567
+# also called 987-654-3210
+
+# / [aeiou]
+# / \d
+# \d{3}
+# \d{3}-\d{3}
+# \d{3}-\d{3}-\d{4}
