@@ -100,3 +100,45 @@ arr = [1, 2, 3, 4, 5].each_with_object([]) do |x, m|
   m << x * x if x.even?
 end
 p arr # [2, 4]
+
+
+puts 
+# tap : getting an intermediate result
+# 1
+res = (1..7).select {|x| x.even? }.reduce do |m, x|
+  puts "debug: #{x}"
+  m + x
+end
+
+p res
+# debug: 4
+# debug: 6
+# 12
+
+res_tap = (1..7).select {|x| x.even? }
+  .tap { |x| puts "debug: #{x}" }
+  .reduce { |m, x| m + x }
+
+p res
+# debug: [2, 4, 6]
+# 12
+
+puts
+# tap other uses 
+def hash_return(params)
+  params[:page] = 1
+  # params
+end
+
+p hash_return(per_page: 10)
+# {:per_page=>10, :page=>1}
+
+# returns '1' without "param"
+
+puts
+def hash_return_tap(params)
+  params.tap { |p| p[:page] = 1 }
+end
+
+p hash_return_tap(per_page: 10)
+# {:per_page=>10, :page=>1}
