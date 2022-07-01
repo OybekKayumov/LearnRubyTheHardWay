@@ -91,3 +91,12 @@ p [1, 2, 3, 4, 5].select { |x| x.even? }.map { |y| y * y }  # [4, 16]
 puts
 # reduce
 p [1, 2, 3, 4, 5].reduce { |m, x| m * x }# 120
+
+p [1, 2, 3, 4, 5].reduce(10) { |m, x| m * x }# 1200
+
+puts
+# each_with_object
+arr = [1, 2, 3, 4, 5].each_with_object([]) do |x, m|
+  m << x * x if x.even?
+end
+p arr # [2, 4]
