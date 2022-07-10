@@ -23,5 +23,7 @@ end
 RSpec.describe HotChocolate do
   it 'confirm that an object can respond to a method' do
     expect(subject).to respond_to(:drink)
+    expect(subject).to respond_to(:drink, :discard)
+    expect(subject).to respond_to(:drink, :discard, :purchase)
   end
 end
