@@ -11,3 +11,9 @@
 ## regex
 
 ## classes
+
+## hashes
+
+## iterators
+
+## strings
