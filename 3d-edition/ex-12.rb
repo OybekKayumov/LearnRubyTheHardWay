@@ -10,3 +10,8 @@ number = another.to_f
 
 smaller = number / 100
 puts "A smaller number is #{smaller}."
+
+# Give me a number: 10
+# A bigger number is 1000.0.
+# Give me another number: 35
+# A smaller number is 0.35.
