@@ -33,7 +33,7 @@ target.write("\n")
 puts "And finally, we close it."
 target.close
 
-# ruby ex-16.rb test.txt 
+# ruby ex-16.rb test.txt
 # We're going to erase test.txt
 # If you don't want that, hit CTRL-C (^C).
 # If you do want that, hit RETURN.
