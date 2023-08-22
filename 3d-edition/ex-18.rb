@@ -21,10 +21,10 @@ end
 
 print_two("John", "Shaw")
 print_two_again("John", "Shaw")
-print_one("First")
+print_one("First!")
 print_none()
 
 # arg1: John, arg2: Shaw
 # arg1: John, arg2: Shaw
-# arg1: First
+# arg1: First!
 # I got nothin'.
