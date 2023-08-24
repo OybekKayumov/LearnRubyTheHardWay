@@ -44,3 +44,46 @@ module Ex25
   end
 
 end
+
+
+# >> require "./ex-25.rb"
+# => true
+# >>
+# ?> sentence = "All good things come to those who wait."
+# => "All good things come to those who wait."
+# >> words = Ex25.break_words(sentence)
+# => ["All", "good", "things", "come", "to", "those", "who", "wait."]
+# >> words
+# => ["All", "good", "things", "come", "to", "those", "who", "wait."]
+# >> sorted_words = Ex25.sort_words(words)
+# => ["All", "come", "good", "things", "those", "to", "wait.", "who"]
+# >> sorted_words
+# => ["All", "come", "good", "things", "those", "to", "wait.", "who"]
+# >> Ex25.print_first_word(words)
+# All
+# => nil
+# >> Ex25.print_last_word(words)
+# wait.
+# => nil
+# >> words
+# => ["good", "things", "come", "to", "those", "who"]
+# >> Ex25.print_first_word(sorted_words)
+# All
+# => nil
+# >> Ex25.print_last_word(sorted_words)
+# who
+# => nil
+# >> sorted_words
+# => ["come", "good", "things", "those", "to", "wait."]
+# >> sorted_words = Ex25.sort_sentence(sentence)
+# => ["All", "come", "good", "things", "those", "to", "wait.", "who"]
+# >> sorted_words
+# => ["All", "come", "good", "things", "those", "to", "wait.", "who"]
+# >> Ex25.print_first_and_last(sentence)
+# All
+# wait.
+# => nil
+# >> Ex25.print_first_and_last_sorted(sentence)
+# All
+# who
+# => nil
