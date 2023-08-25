@@ -12,20 +12,18 @@ end
 
 if trucks > cars
   puts "That's too many trucks."
-elsif
+elsif trucks < cars
   puts "Maybe we could take the trucks."
 else
   puts "We still can't decide."
 end
 
-if people > trucks 
+if people > trucks
   puts "Alright, let's just take the trucks."
 else
   puts "Fine, let's stay home then."
 end
 
-# Too many cats! The world is doomed!
-# The world is dry!
-# People are greater than or equal to dogs.
-# People are less than or equal to dogs.
-# People are equal to dogs.
+# We should take the cars.
+# Maybe we could take the trucks.
+# Alright, let's just take the trucks.
