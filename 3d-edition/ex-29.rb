@@ -18,4 +18,23 @@ if people > dogs
   puts "The world is dry!"
 end
 
+dogs += 5
 
+if people >= dogs
+  puts "People are greater than or equal to dogs."
+end
+
+if people <= dogs
+  puts "People are less than or equal to dogs."
+end
+
+
+if people == dogs
+  puts "People are equal to dogs."
+end
+
+# Too many cats! The world is doomed!
+# The world is dry!
+# People are greater than or equal to dogs.
+# People are less than or equal to dogs.
+# People are equal to dogs.
