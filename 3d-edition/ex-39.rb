@@ -23,4 +23,3 @@ puts stuff['height']  # 74
 puts
 stuff['city'] = "San Francisco"
 print stuff['city']   # San Francisco
-
