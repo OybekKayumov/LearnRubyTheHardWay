@@ -2,15 +2,15 @@
 class Animal
 end
 
-## ??
+## Dog is-a Animal
 class Dog < Animal
   def initialize(name)
-    ## ??
+    ## Dog has-a name
     @name = name
   end
 end
 
-## ??
+## Cat is-a Animal
 class Cat < Animal
   def initialize(name)
     ## ??
@@ -44,3 +44,38 @@ end
 ## ??
 class Fish
 end
+
+## ??
+class Salmon < Fish
+end
+
+## ??
+class Halibut < Fish
+end
+
+## rover is-a Dog
+rover = Dog.new("Rover")
+
+## ?? 
+sam = Cat.new("Sam")
+
+## ??
+mary = Person.new("Mary")
+
+## ??
+mary.pet = sam
+
+## ??
+frank = Employee.new("Frank", 120000)
+
+## ??
+frank.pet = rover
+
+## ??
+flipper = Fish.new()
+
+## ??
+crouse = Salmon.new()
+
+## ??
+harry = Halibut.new()
