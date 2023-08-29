@@ -1,6 +1,7 @@
 require 'open-uri'
 
-WORD_URL = "http://learncodethehardway.org/words.txt"
+# WORD_URL = "http://learncodethehardway.org/words.txt"
+WORD_URL = "./words.txt"
 WORDS = []
 
 PHRASES = {
