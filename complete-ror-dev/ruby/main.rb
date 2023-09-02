@@ -48,3 +48,12 @@ puts
 # \ escape
 p 'John asked \'Hey Bob, how are you doing?\''
 # "John asked 'Hey Bob, how are you doing?'"
+
+# todo: && and || are logical operators.
+5 && 6
+# 6
+5 || 6
+# 5
+
+# 1)  && operator returns the second argument if first argument is true and returns false if first argument or second argument is false . So 5 && 6 returns 6 as 5 is true
+# 2) || operator returns the first number if the first number is true and it does not check the second number for truthiness and returns false if both arguments are false. So 5 || 6 returns 5 as 5 is true. 
