@@ -47,4 +47,4 @@ p f_name        # "Joe"
 puts
 # \ escape
 p 'John asked \'Hey Bob, how are you doing?\''
-"John asked 'Hey Bob, how are you doing?'"
+# "John asked 'Hey Bob, how are you doing?'"
