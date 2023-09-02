@@ -1,5 +1,9 @@
 
 # LearnRubyTheHardWay
+  cd 3d-edition/projects/gothonweb/
+  ruby bin/app.rb
+  
+  rerun 'ruby bin/app.rb'
 
 ## pry practice
 
