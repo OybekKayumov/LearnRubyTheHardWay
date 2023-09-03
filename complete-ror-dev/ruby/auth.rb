@@ -1,3 +1,4 @@
+# users array where username and password are stored
 users = [
   { username: "john", password: "pwd1" },
   { username: "jack", password: "pwd2" },
@@ -6,8 +7,15 @@ users = [
   { username: "heisenberg", password: "pwd5" },
 ]
 
+# authentication method to check and verify if username/password combination exists
 def auth_user(username, password, list_of_users)
-  
+  list_of_users.each do |user|
+    if user[:username] == username && user[:password] == password
+      return user
+    end
+  end
+  # return "Credentials were not correct"
+  "Credentials were not correct"
 end
 
 puts "Welcome to the authenticator"
@@ -24,19 +32,15 @@ while attempts < 4
   print "Password: "
   password = gets.chomp
 
-  users.each do |user|
-    if user[:username] == username && user[:password] == password
-      puts user
-      break
-    else
-      puts "Credentials were not correct"
-    end
-  end
+  authentication = auth_user(username, password, users)
+  puts authentication
 
   puts "Press n to quit or any other kay to continue: "
   inp = gets.chomp.downcase
-  break if inp == 'n'
 
+  break if inp == 'n'
 
   attempts += 1
 end
+
+puts "You have exceeded the number of attempts" if attempts == 4
