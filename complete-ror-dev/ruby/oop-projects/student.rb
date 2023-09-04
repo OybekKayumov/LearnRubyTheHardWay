@@ -1,8 +1,9 @@
 require 'bcrypt'
-
-my_password = BCrypt::Password.create("my password")
+require_relative 'crud'
 
 class Student
+  include Crud
+
   attr_accessor :first_name, :last_name, :email, :username, :password
 
   def initialize(first_name, last_name, username, email, password)
@@ -26,3 +27,8 @@ end
 john = Student.new("John", "Doe", "john", "john@email.com", "pwd1")
 puts john
 # First name: John, Last name: Doe, Username: john, email address: john@email.com
+
+#TODO: get crypted password using module and mixin
+hashed_pwd = john.create_hash_digest(john.password)
+p hashed_pwd
+# "$2a$12$2bEab2rMGVPGkYOpDWmI8uMxVqL.bnHYjRKWXTyWijBLHzI7F76p."
