@@ -1,5 +1,7 @@
 puts "This is the first (master) program file."
-load "loadee.rb"
+# load "loadee.rb"
+require_relative "loadee"
+# require "./loadee"
 puts "And back again to the first file"
 
 
