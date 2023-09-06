@@ -58,3 +58,59 @@ end
 #                                       m(1,3,5,7) m(1,3,5,7,9)	
 #                                                         a = 1, b = 2, c = [ ], d = 3 a = 1, b = 3, c = [ ], d = 5 a = 1, b = 3, c = [5], d = 7 a = 1, b = 3, c = [5,7], d = 9
 
+# Required and optional arguments
+obj = Object.new
+def obj.one_arg(x)
+  puts "I require one and only one argument!"
+end
+
+obj.one_arg(1,2,3)
+#! ArgumentError: wrong number of arguments (given 3, expected 1)
+
+# method that allows any number of arguments
+def obj.multi_args(*x)
+  puts "I can take zero ot more arguments!"
+end
+
+# The *x notation means that when you call the method, you can supply any number of arguments (or none)
+
+def two_or_more(a,b,*c)
+  puts "I require two or more arguments!"
+  puts "And sure enough, I got: "
+  p a, b, c
+end
+
+two_or_more(1,2,3,4,5)
+# I require two or more arguments!
+# And sure enough, I got:
+# 1
+# 2
+# [3, 4, 5]
+
+# (Using p rather than print or puts results in the array being printed out in array notation. Otherwise, each array element would appear on a separate line, making it harder to see that an array is involved at all.)
+# (Использование pвместо printили putsприводит к тому, что массив выводится в нотации массива. В противном случае каждый элемент массива будет отображаться в отдельной строке, что затруднит понимание того, что массив вообще задействован.)
+
+# Default values for arguments
+def default_args(a, b, c=1)
+  puts "Values of variables: ", a, b, c
+end
+
+default_args(3,2)
+# Values of variables:
+# 3
+# 2
+# 1
+
+# Order of parameters and arguments
+def mixed_args(a,b,*c,d)
+  puts "Arguments: "
+  p a,b,c,d
+end
+
+mixed_args(1,2,3,4,5)
+# Arguments:
+# 1
+# 2
+# [3, 4]
+# 5
+
