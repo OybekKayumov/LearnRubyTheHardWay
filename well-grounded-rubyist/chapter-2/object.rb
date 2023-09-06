@@ -114,3 +114,15 @@ mixed_args(1,2,3,4,5)
 # [3, 4]
 # 5
 
+# If you only give enough arguments to match the required arguments of the method, then the sponge array will be empty. The method call
+mixed_args(1,2,3)
+# 1
+# 2
+# []
+# 3
+
+def all_optional(*args)
+
+end
+
+
