@@ -28,3 +28,5 @@
 * https://livebook.manning.com/book/the-well-grounded-rubyist-third-edition
 * https://poignant.guide/book/
 
+
+# 2023
