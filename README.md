@@ -21,3 +21,10 @@
 ## iterators
 
 ## strings
+
+# Books:
+
+* https://learnrubythehardway.org/book/
+* https://livebook.manning.com/book/the-well-grounded-rubyist-third-edition
+* https://poignant.guide/book/
+
