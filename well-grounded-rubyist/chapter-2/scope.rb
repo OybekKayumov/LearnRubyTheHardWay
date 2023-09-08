@@ -58,3 +58,11 @@ puts abc
 # Goodbbye !
 # Hi
 
+# References and method arguments
+def change_string(str)
+  puts str.replace("New string content!")
+end
+
+s = "Original string content!"
+change_string(s)
+
