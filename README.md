@@ -1,9 +1,11 @@
 
 # LearnRubyTheHardWay
-  cd 3d-edition/projects/gothonweb/
-  ruby bin/app.rb
+   ```sh
+   cd 3d-edition/projects/gothonweb/
+   ruby bin/app.rb
   
-  rerun 'ruby bin/app.rb'
+   rerun 'ruby bin/app.rb'
+  ```
 
 ## pry practice
 
@@ -29,4 +31,4 @@
 * https://poignant.guide/book/
 
 
-# 2023
+# _2023_
