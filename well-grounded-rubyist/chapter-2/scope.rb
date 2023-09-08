@@ -60,9 +60,39 @@ puts abc
 
 # References and method arguments
 def change_string(str)
-  puts str.replace("New string content!")
+  str.replace("New string content!")
 end
 
 s = "Original string content!"
 change_string(s)
+
+puts s
+# New string content!
+
+# Duping and freezing objects
+# If you want to protect objects from being changed inside methods to which you send them, you can use the dup method, which duplicates an object:
+s = "Original string content!"
+change_string(s.dup)
+puts s
+# Original string content!
+
+# freeze an object, which prevents it from undergoing further change
+s = "Original string content!!!"
+s.freeze
+change_string(s)
+
+# there’s also a method called clone. It’s a lot like dup. The difference is that if you clone a frozen object, the clone is also frozen—whereas if you dup a frozen object, the duplicate isn’t frozen.
+
+
+numbers = ["one", "two", "three"]
+# ["one", "two", "three"]
+numbers.freeze
+# ["one", "two", "three"]
+numbers[2] = "four"
+# RuntimeError: can't modify frozen array
+
+numbers[2].replace("four")
+# "four"
+numbers
+# ["one", "two", "four"]
 
