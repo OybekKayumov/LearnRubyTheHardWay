@@ -132,28 +132,60 @@ end
 #<Ticket:0x000001820e65d4c0 @venue="Town Hall", @date="2023-09-12", @price=63.0> 
 
 class Ticket2
-  def initialize(venue, date)
+  def initialize(venue)
     @venue = venue
-    @date = date
   end
 
+  def venue
+    @venue
+  end
+  
   def set_price(amount)
+  # def price=(amount)    same
     @price = amount
   end
 
   def price
     @price
   end
+
+  def date
+    @date
+  end
+
+  def discount(percent)
+    @price = @price * (100 - percent) / 100
+    "$#{"%.2f" % @price}."
+  end
+  
+  def date=(date)
+    if !date.match(/\d{4}-\d{2}-\d{2}/)
+      puts "Please submit the date in the format 'yyyy-mm-dd'."
+      return
+    end
+
+    @date = date
+  end
 end
 
-ticket = Ticket2.new("Town HAll", "2023-09-12")
-ticket.set_price(63.00)
+th = Ticket2.new("Town Hall")
+th.set_price(63.00)
 
-puts "The ticket costs $#{"%.2f" % ticket.price}." # format to 2 decimal places
 
-ticket.set_price(72.50)
-puts "Whoops -- it just went up. It now costs $#{"%.2f" % ticket.price}." 
+puts "The ticket costs $#{"%.2f" % th.price}." # format to 2 decimal places
+
+#? The percent sign technique you saw in the last example allows you to format data into strings. 
+#? Possible field type characters (those that accompany the % inside the pattern string) include 
+#!   %d for decimal numbers, 
+#!   %s for strings, 
+#!   %f for floats, 
+#!   %x for hexadecimal numbers.
+
+# th.set_price(72.50)
+# puts "Whoops -- it just went up. It now costs $#{"%.2f" % th.price}." 
 # The ticket costs $63.00.
 # Whoops -- it just went up. It now costs $72.50.
 
-
+puts th.price
+puts "The ticket for #{th.venue} has been discounted 15% to #{th.discount(15)}"
+# The ticket for Town Hall has been discounted 15% to $53.55.
