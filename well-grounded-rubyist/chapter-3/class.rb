@@ -112,20 +112,48 @@ def set_name(str)
 end
 
   # The equal sign (=) in method names
-class Ticket
-  def initialize(venue, date, price)
+# class Ticket
+#   def initialize(venue, date, price)
+#     @venue = venue
+#     @date = date
+#     @price = price
+#   end
+
+#   # etc.
+#   def price
+#     @price
+#   end
+
+#   # etc.
+# end
+
+# th = Ticket.new("Town Hall", "2023-09-12", 63.00)
+# p th
+#<Ticket:0x000001820e65d4c0 @venue="Town Hall", @date="2023-09-12", @price=63.0> 
+
+class Ticket2
+  def initialize(venue, date)
     @venue = venue
     @date = date
-    @price = price
   end
 
-  # etc.
+  def set_price(amount)
+    @price = amount
+  end
+
   def price
     @price
   end
-
-  # etc.
 end
 
-th = Ticket.new("Town Hall", "2023-09-12", 63.00)
-p th
+ticket = Ticket2.new("Town HAll", "2023-09-12")
+ticket.set_price(63.00)
+
+puts "The ticket costs $#{"%.2f" % ticket.price}." # format to 2 decimal places
+
+ticket.set_price(72.50)
+puts "Whoops -- it just went up. It now costs $#{"%.2f" % ticket.price}." 
+# The ticket costs $63.00.
+# Whoops -- it just went up. It now costs $72.50.
+
+
