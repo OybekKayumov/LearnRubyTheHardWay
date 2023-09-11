@@ -105,3 +105,27 @@ puts "The second is for an event on #{cc.date} at #{cc.venue}."
 # The second is for an event on 2014-12-13 at Convention Center.
 
 # Setter methods
+
+def set_name(str)
+  puts "Setting person's name..."
+  @name = str
+end
+
+  # The equal sign (=) in method names
+class Ticket
+  def initialize(venue, date, price)
+    @venue = venue
+    @date = date
+    @price = price
+  end
+
+  # etc.
+  def price
+    @price
+  end
+
+  # etc.
+end
+
+th = Ticket.new("Town Hall", "2023-09-12", 63.00)
+p th
