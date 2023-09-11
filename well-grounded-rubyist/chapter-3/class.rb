@@ -171,8 +171,8 @@ end
 th = Ticket2.new("Town Hall")
 th.set_price(63.00)
 
-
 puts "The ticket costs $#{"%.2f" % th.price}." # format to 2 decimal places
+# The ticket costs $63.00.
 
 #? The percent sign technique you saw in the last example allows you to format data into strings. 
 #? Possible field type characters (those that accompany the % inside the pattern string) include 
@@ -189,3 +189,9 @@ puts "The ticket costs $#{"%.2f" % th.price}." # format to 2 decimal places
 puts th.price
 puts "The ticket for #{th.venue} has been discounted 15% to #{th.discount(15)}"
 # The ticket for Town Hall has been discounted 15% to $53.55.
+
+th.date = "23-11-12"
+# Please submit the date in the format 'yyyy-mm-dd'.
+
+puts th.date = "2023-11-12"
+# 2023-11-12
