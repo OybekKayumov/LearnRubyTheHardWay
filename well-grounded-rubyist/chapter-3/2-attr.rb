@@ -34,8 +34,14 @@ class Ticket
   attr_reader :venue, :date, :price
   attr_writer :price
 
+  VENUES = ["Convention Center", "Fairgrounds", "Town Hall"]
+
   def initialize(venue, date)
-    @venue = venue
+    if VENUES.include?(vanue)
+      @venue = venue
+    else
+      raise ArgumentError, "Unknown venue #{venue}"
+    end
     @date = date
   end
 end
