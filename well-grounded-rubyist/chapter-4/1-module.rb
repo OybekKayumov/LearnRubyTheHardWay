@@ -57,3 +57,46 @@ puts s.stack
 # Now on stack:
 # item one
 # item two
+
+
+# Nonmodular rewrite of the Stack class
+class Stack_NM
+  attr_reader :stack
+
+  def initialize
+    @stack = []
+  end
+
+  def add_to_stack(obj)
+    @stack.push(obj)
+  end
+
+  def take_from_stack
+    @stack.pop
+  end
+end
+
+st = Stack_NM.new
+st.add_to_stack("item 1")
+st.add_to_stack("item 2")
+st.add_to_stack("item 3")
+
+puts "Ojects currently on the stack:"
+puts st.stack
+
+# Ojects currently on the stack:
+# item 1
+# item 2
+# item 3
+
+taken = st.take_from_stack
+puts "Removed this object:"
+puts taken
+# Removed this object:
+# item 3
+
+puts "Now on stack:"
+puts st.stack
+# Now on stack:
+# item 1
+# item 2
