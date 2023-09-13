@@ -4,8 +4,17 @@ module M
   end
 end
 
+module N
+  def report
+    puts "'report' method in module N" 
+  end
+end
+
 class C
   include M
+  include N
+  include M   #! 'report' method in module N
+
 end
 
 class D < C
@@ -15,6 +24,12 @@ end
 obj = D.new
 obj.report
 # 'report' method in module M
+# N
+# 'report' method in module N
+
+c = C.new
+c.report
+# 'report' method in module N
 
 # Two same-named methods on a single search path
 module InterestBearing
