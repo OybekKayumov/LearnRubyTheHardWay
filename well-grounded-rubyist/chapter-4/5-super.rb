@@ -1,3 +1,4 @@
+# Using the super keyword to reach up one level in the lookup path
 module M
   def report
     puts "'report' method in module M"
@@ -22,4 +23,24 @@ c.report
 # About to trigger the next higher-up report method...
 # 'report' method in module M
 # Back from the 'super' call.
+
+# Using super to wrap a method in a subclass
+class Bicycle
+  attr_reader :gears, :wheels, :seats
+
+  def initialize(gear = 1)
+    @wheels = 2
+    @seats = 1
+    @gears = gears
+  end
+
+end
+
+class Tandem < Bicycle
+
+  def initialize(gears)
+    super
+    @seats = 2
+  end
+end
 
