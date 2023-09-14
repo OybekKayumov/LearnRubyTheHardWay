@@ -19,6 +19,28 @@ class C
     puts "Class C, method x: "
     puts self
   end
+
+  def C.y
+    puts "Class method of class C"
+    puts "self: #{self}"
+  end
+
+  # def self.z is the same as def C.y.
+  def self.z
+    puts "Class method of class C"
+    puts "self: #{self}"
+  end
+
+  # another syntax class << self instructs the class that the following methods will be class methods. Notice the end keyword that declares the end of the class-definition grouping
+  class << self
+    def x1
+      # definition ov x1
+    end
+
+    def y1
+      # definition of y1
+    end
+  end
 end
 
 # Just started class C: 
@@ -34,3 +56,8 @@ puts "That was a call to x from: #{c}"
 # Class C, method x:
 #<C:0x000002bf23f80ea0>
 # That was a call to x from: #<C:0x000002bf23f80ea0> 
+
+puts
+C.y
+# Class method of class C
+# self: C
