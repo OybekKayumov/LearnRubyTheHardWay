@@ -52,5 +52,19 @@ puts "There are #{Car.total_count}."
 # Counting total cars...
 # There are 3.
 
-x = Car.new("Brand X")  # RuntimeError: No such make: Brand X.
+# x = Car.new("Brand X")  # RuntimeError: No such make: Brand X.
 
+# CLASS VARIABLES AND THE CLASS HIERARCHY
+class Parent
+  @@value = 200  # set class variable
+end
+
+class Child < Parent
+  @@value = 300 # set class variable in subclass
+end
+
+class Parent
+  puts @@value  # back in parent class, @@value is 300
+end
+
+# 300
