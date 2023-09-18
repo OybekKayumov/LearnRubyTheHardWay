@@ -50,3 +50,40 @@ puts ret
 # I'm on iteration 3!
 # I'm on iteration 4!
 # 5
+
+puts
+# each
+array.each { |e| puts "The block just got handed #{e}." }
+# The block just got handed 1.
+# The block just got handed 2.
+# The block just got handed 3.
+# The block just got handed 4.
+# The block just got handed 5.
+class Array
+  def my_each
+    c = 0
+    until c == size
+      yield self[c]
+      c += 1
+    end
+
+    self
+  end
+end
+
+puts
+array.my_each { |e| puts "The block just got handed #{e}!" }
+
+# The block just got handed 1!
+# The block just got handed 2!
+# The block just got handed 3!
+# The block just got handed 4!
+# The block just got handed 5!
+
+# map
+names = ["David", "Alan", "Black"]
+# names.map { |name| name.upcase }
+p names
+p names.map { |name| name.upcase }
+# ["David", "Alan", "Black"]
+# ["DAVID", "ALAN", "BLACK"]
